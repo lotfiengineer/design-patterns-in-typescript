@@ -1,7 +1,19 @@
+import DocumentState from "./DocumentState";
+
 export default class Document {
   private content: string = "";
   private fontName: string = "";
   private fontSize: number = 14;
+
+  public createState = (): DocumentState => {
+    return new DocumentState(this.content, this.fontName, this.fontSize);
+  };
+
+  public restore = (state: DocumentState): void => {
+    this.content = state.getContent();
+    this.fontName = state.getFontName();
+    this.fontSize = state.getFontSize();
+  };
 
   public getContent = (): string => {
     return this.content;
