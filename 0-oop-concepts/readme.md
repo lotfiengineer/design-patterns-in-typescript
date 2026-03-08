@@ -10,6 +10,11 @@ Interface: A contract that specifies the capabilities that a class should provid
 3. Inheritance -> A mechanism for reusing code. | Implement common behaviors in a parent or base class and have other classes inherit those behaviors.
 4. Polymorphism -> An object can take on many different forms
 
+<br />
+An interface class is like a contract. <br />
+We can't instantiate from abstract and interface classes.
+<br />
+
 UML: Unified Modeling Language <br />
 It is an official language to model our systems. <br />
 In the course, we use it to represent our classes and the relationship. <br />
