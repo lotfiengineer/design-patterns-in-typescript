@@ -18,3 +18,18 @@ Benefits of this pattern:
 3. We can add them to a list.
 4. We can replay or undo the commmands.
 5. We can store commands in a database and execute them in the future.
+
+The Command pattern allows us to implement the undo mechanisms. <br />
+This is how: <br />
+<img src="./undoable command.png" width=300>
+
+The difference between Command and Memento in undo operations: <br />
+In memento -> We store changes in the state of an object. We store multiple snapshots over time. Sometimes storing these snapshots can be expensive.
+In Command -> every command knows how to undo itself. So we don't have to store multiple snapshots of an object. <br />
+Example: Resize operation. If the user resizes a video, all we have to store is the original dimension of the video (In command pattern), not the entire snapshot of the video object (In memento).
+
+Full undo mechanism in command pattern: <br />
+<img src="./full undo mechanism in command pattern.png" width=400>
+
+In this pattern, I learned how passing the references of objects to other clases (composition) can be super useful and powerful. I truly learned and enjoyed. <br />
+Now I understand object oriented programming.
