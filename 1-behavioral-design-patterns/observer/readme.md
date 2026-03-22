@@ -1,4 +1,3 @@
-
 We use the observer pattern in situations where the state of an object changes and we need to notify other objects about these changes.
 
 Understanding the observer pattern was easy for me.<br/>
@@ -11,5 +10,10 @@ This is an example of how observer pattern works: <br />
 The structure of the observer pattern in GOF book:<br />
 <img src="./observer pattern in gof book.png" width=500>
 
+There are 2 ways to pass value:
 
-Passing the value:
+1. push style communication <br />
+   <img src="./push style.png" width=400>
+
+2. pull style communication (recommended) <br />
+   <img src="./pull style.png" width=400>

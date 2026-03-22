@@ -4,12 +4,12 @@ import SpreadSheet from "./SpreadSheet";
 
 // Write code here
 const dataSource = new DataSource();
-const sheet1 = new SpreadSheet();
-const sheet2 = new SpreadSheet();
-const chart = new Chart();
+const sheet1 = new SpreadSheet(dataSource);
+const sheet2 = new SpreadSheet(dataSource);
+const chart = new Chart(dataSource);
 
 dataSource.addObserver(sheet1)
 dataSource.addObserver(sheet2)
 dataSource.addObserver(chart)
 
-dataSource.setValue(1);
+dataSource.setValue(5);
