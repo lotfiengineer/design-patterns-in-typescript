@@ -6,9 +6,9 @@ import QuickBooksReader from "./QuickBooksReader";
 export default class DataReaderFactory {
   // .xls -> .numbers -> .qbw
   static getDataReaderChain(): DataReader {
-    const quickBooksReader = new QuickBooksReader(null);
-    const numbersReader = new NumbersReader(null);
-    const excelReader = new ExcelReader(null);
+    const excelReader = new ExcelReader();
+    const numbersReader = new NumbersReader();
+    const quickBooksReader = new QuickBooksReader();
 
     excelReader.setNext(numbersReader);
     numbersReader.setNext(quickBooksReader);

@@ -1,7 +1,12 @@
 export default abstract class DataReader {
   private next: DataReader | null;
 
-  constructor(next: DataReader | null) {
+  constructor(next?: DataReader | null) {
+    if (next === undefined) {
+      this.next = null;
+      return;
+    }
+
     this.next = next;
   }
 
