@@ -1,0 +1,8 @@
+import AudioFilter from "./AudioFilter";
+import Segment from "./Segment";
+
+export default class FactSegment extends Segment {
+  applyFilter(filter: AudioFilter): void {
+    filter.apply(this);
+  }
+}
