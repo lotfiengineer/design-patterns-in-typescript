@@ -1,15 +1,14 @@
-import Artefact from "./Artefact";
+import AbstractArtefact from "./AbstractArtefact";
 
+export default class ErrorArtifact implements AbstractArtefact {
+  private artefact: AbstractArtefact;
 
-export default class ErrorArtifact implements Artefact {
-  private artefact: Artefact;
-
-  constructor(artefact: Artefact) {
+  constructor(artefact: AbstractArtefact) {
     this.artefact = artefact;
   }
 
   render(): string {
-    const icon = "[Error]"
-    return `${this.artefact.render()} ${icon}`
+    const icon = "[Error]";
+    return `${this.artefact.render()} ${icon}`;
   }
 }

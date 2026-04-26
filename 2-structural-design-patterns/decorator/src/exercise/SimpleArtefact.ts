@@ -1,6 +1,6 @@
-import Artefact from "./Artefact";
+import AbstractArtefact from "./AbstractArtefact";
 
-export default class SimpleArtefact implements Artefact {
+export default class SimpleArtefact implements AbstractArtefact {
   private fileName: string;
 
   constructor(fileName: string) {
