@@ -1,8 +1,7 @@
 import FontFactory from "./FontFactory";
-import FontService from "./FontService";
 import SpreadSheet from "./SpreadSheet";
 
-const service = new FontService(new FontFactory());
+const service = new FontFactory();
 
 var sheet = new SpreadSheet(service);
 sheet.setContent(0, 0, "Hello");

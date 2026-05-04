@@ -5,6 +5,13 @@ export default class FontFactory {
   // How to improve it:
   // Inside this class Make sure that every combination
   // of (fontFamily, fontSize, isBold) attributes will only be stored once.
+
+  // I can hash fontFamily, fontSize and isBold together and store it inside
+  // the fonts.
+  // this way, the fonts field becomes an array of objects with two properties:
+  // { hash: string, font: Font }
+  // nice :)
+
   private fonts: Font[] = [];
 
   getFont(fontFamily: string) {

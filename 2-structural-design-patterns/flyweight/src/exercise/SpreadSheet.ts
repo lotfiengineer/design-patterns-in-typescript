@@ -1,17 +1,17 @@
 import Cell from "./Cell";
 import { defaultFontFamily } from "./defaultFontFamily";
-import FontService from "./FontService";
+import FontFactory from "./FontFactory";
 
 export default class SpreadSheet {
   private MAX_ROWS = 3;
   private MAX_COLS = 3;
 
-  private fontService: FontService;
+  private fontFactory: FontFactory;
 
   private cells: Cell[][] = [[], [], []];
 
-  constructor(fontService: FontService) {
-    this.fontService = fontService;
+  constructor(fontService: FontFactory) {
+    this.fontFactory = fontService;
     this.generateCells();
   }
 
@@ -24,7 +24,7 @@ export default class SpreadSheet {
   setFontFamily(row: number, col: number, fontFamily: string) {
     this.ensureCellExists(row, col);
 
-    this.cells[row][col].setFont(this.fontService.getFont(fontFamily));
+    this.cells[row][col].setFont(this.fontFactory.getFont(fontFamily));
   }
 
   ensureCellExists(row: number, col: number) {
@@ -37,7 +37,7 @@ export default class SpreadSheet {
     for (var row = 0; row < this.MAX_ROWS; row++)
       for (var col = 0; col < this.MAX_COLS; col++) {
         var cell = new Cell(row, col);
-        cell.setFont(this.fontService.getFont(defaultFontFamily));
+        cell.setFont(this.fontFactory.getFont(defaultFontFamily));
         this.cells[row][col] = cell;
       }
   }
